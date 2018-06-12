@@ -1,7 +1,9 @@
 require 'nokogiri'
 require 'open-uri'
 
-doc = Nokogiri::HTML(open('https://github.com/atchyutn'), nil, 'UTF-8')
+puts "Please enter the url you want to find preview"
+url = gets.chomp
+doc = Nokogiri::HTML(open(url), nil, 'UTF-8')
 
 title = ""
 description = ""
